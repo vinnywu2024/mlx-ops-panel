@@ -36,7 +36,7 @@
 零第三方依赖，标准库即可运行。
 
 ```bash
-git clone https://github.com/<owner>/mlx-ops-panel.git
+git clone https://github.com/vinnywu2024/mlx-ops-panel.git
 cd mlx-ops-panel
 cp config.example.env config.env      # 可选：按自己的部署改
 ./panel.sh                            # 前台启动，另开终端用 ./panel.sh status / stop
