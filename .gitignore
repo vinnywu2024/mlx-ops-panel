@@ -1,0 +1,27 @@
+# 本机配置：真实目录、端口、launchd 标签、日志路径都放这里，永远不入库
+config.env
+.env
+*.local
+
+# 运行产物与审计日志（可能含本机路径、命令行、内网信息）
+*.jsonl
+*.log
+logs/
+audit/
+
+# 备份与临时文件
+*.bak
+*.bak-*
+*.orig
+*.swp
+*~
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+dist/
+build/
+
+# 编辑器
+.idea/
+.vscode/

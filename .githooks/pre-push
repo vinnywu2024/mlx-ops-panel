@@ -1,0 +1,10 @@
+#!/bin/sh
+# push 前自动跑发布门禁，漏脱敏就推不出去。
+# 启用（在仓库根执行一次，hook 随仓库走、每台 clone 都要自己启用一次）：
+#     git config core.hooksPath .githooks
+set -u
+cd "$(git rev-parse --show-toplevel)" || exit 1
+python3 scripts/prepublish_check.py || {
+    echo "pre-push: 发布门禁未通过，已阻止 push。" >&2
+    exit 1
+}
